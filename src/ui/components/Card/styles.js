@@ -29,8 +29,8 @@ export default (theme) => ({
 	},
 	content: {
 		width: '86%',
-		fontSize: '16px',
-		fontWeight: '400',
+		fontSize: '15px',
+		fontWeight: '300',
 		padding: '10px',
 	},
 	closeButtonDiv: {
