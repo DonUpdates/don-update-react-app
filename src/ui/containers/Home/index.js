@@ -79,7 +79,7 @@ const Home = ({ ...props }) => {
 					key={index}
 					content={x.content}
 					time={x.time}
-					onRemoveClick={(e) => onRemoveNewsClick(x.id)}
+					// onRemoveClick={(e) => onRemoveNewsClick(x.id)}
 					/>
 				))
 			  }
@@ -93,7 +93,7 @@ const Home = ({ ...props }) => {
 					key={index}
 					content={x.content}
 					time={x.time}
-					onRemoveClick={(e) => onRemoveBreakingClick(x.id)}
+					// onRemoveClick={(e) => onRemoveBreakingClick(x.id)}
 					/>
 				))
 			  }
@@ -107,7 +107,7 @@ const Home = ({ ...props }) => {
 					key={index}
 					content={x.content}
 					time={x.time}
-					onRemoveClick={(e) => onRemoveInfoClick(x.id)}
+					// onRemoveClick={(e) => onRemoveInfoClick(x.id)}
 					/>
 				))
 			  }

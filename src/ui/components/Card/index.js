@@ -2,12 +2,12 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import React from 'react';
 import style from './styles';
-import Cancel from '@material-ui/icons/CancelOutlined';
 import { withStyles } from '@material-ui/core';
+import PopOver from '../Popover';
 
 const Card = ({ ...props }) => {
 	const {
-		classes, content, onRemoveClick, time,
+		classes, content, time,
 	} = props;
 	const timeData = time.split(' ');
 
@@ -21,7 +21,7 @@ const Card = ({ ...props }) => {
 				</div>
 				<div className={classes.content}>{content}</div>
 				<div className={classes.closeButtonDiv}>
-					<Cancel className={classes.closeButton} onClick={onRemoveClick} />
+					<PopOver content={content} />
 				</div>
 			</div>
 		</div>
@@ -32,7 +32,6 @@ Card.propTypes = {
 	classes: PropTypes.object.isRequired,
 	content: PropTypes.string,
 	header: PropTypes.string,
-	onRemoveClick: PropTypes.func,
 };
 
 export default withStyles(style)(Card);

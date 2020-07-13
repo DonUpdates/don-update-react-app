@@ -6,6 +6,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import TabPanel from '../TabPanel';
 import PropTypes from 'prop-types';
+import style from './styles';
+import { withStyles } from '@material-ui/core';
 
 const CustomTabs = ({ ...props }) => {
   const theme = useTheme();
@@ -20,6 +22,7 @@ const CustomTabs = ({ ...props }) => {
   };
   
   const {
+    classes,
     newsItem,
     breakingItem,
     infoItem
@@ -33,10 +36,11 @@ const CustomTabs = ({ ...props }) => {
           onChange={handleChange}
           indicatorColor="secondary"
           variant="fullWidth"
+          className={classes.tabHeader}
         >
-          <Tab label="News" />
-          <Tab label="Breaking" />
-          <Tab label="Info" />
+          <Tab className={classes.tabItem} label="News" />
+          <Tab className={classes.tabItem} label="Breaking" />
+          <Tab className={classes.tabItem} label="Info" />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -59,9 +63,11 @@ const CustomTabs = ({ ...props }) => {
 }
 
 CustomTabs.propTypes = {
+  classes: PropTypes.object,
 	newsItem: PropTypes.object,
   breakingItem: PropTypes.object,
   infoItem: PropTypes.object,
 };
 
-export default CustomTabs;
+export default withStyles(style)(CustomTabs);
+
