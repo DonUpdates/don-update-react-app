@@ -30,7 +30,7 @@ const CustomTabs = ({ ...props }) => {
 
   return (
     <div>
-      <AppBar position="static" color="primary">
+      <AppBar position="sticky" color="primary">
         <Tabs
           value={value}
           onChange={handleChange}

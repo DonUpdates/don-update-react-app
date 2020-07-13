@@ -29,7 +29,7 @@ export default (theme) => ({
 	},
 	content: {
 		width: '86%',
-		fontSize: '15px',
+		fontSize: '14px',
 		fontWeight: '300',
 		padding: '10px',
 	},

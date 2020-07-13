@@ -69,7 +69,7 @@ const Home = ({ ...props }) => {
 	
 	return (
     <>
-      <div className={classes.bottomContainer}>
+      <div className={classes.container}>
         <Tabs
           newsItem={
             <>

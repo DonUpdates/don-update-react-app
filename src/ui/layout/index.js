@@ -13,7 +13,7 @@ const MainLayout = ({ children }) => {
 		<Container className={classes.main} component="main" maxWidth="md">
 			<div className={classes.site}>
 				<div className={classes.siteContent}>
-					<div className={classes.appHeader}>
+					<div className={classes.header}>
 						<Header />
 					</div>
 					<div className={classes.main}>

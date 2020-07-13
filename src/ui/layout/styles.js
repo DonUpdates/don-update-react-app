@@ -4,6 +4,9 @@ export default () => ({
 			padding: '2px',
 		},
 	},
+	header: {
+		// position: 'fixed',
+	},
 	site: {
 		display: 'flex',
 		flexDirection: 'column',
