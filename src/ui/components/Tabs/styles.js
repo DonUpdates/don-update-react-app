@@ -3,7 +3,7 @@ export default () => ({
 		minHeight:'unset',
 	},
 	tabItem: {
-        fontSize:'20px', 
+        fontSize:'16px', 
         minHeight:'unset', 
         padding: '2px 10px',
 	},

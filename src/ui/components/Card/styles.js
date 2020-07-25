@@ -10,18 +10,18 @@ export default (theme) => ({
 		margin: '20px 5px 20px 5px',
 		position: 'relative',
 	},
-	timeComponent: {
-		paddingLeft: '3px',
-	},
-	meridium: {
-		paddingLeft: '5px',
+	timeInner: {
+		alignItems: 'center',
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'space-evenly',
 	},
 	timestampCircle: {
 		margin: '10px',
-		fontSize: '14px',
-		fontWeight: '400',
+		fontSize: '12px',
+		fontWeight: '300',
 		width: '50px',
-		height: '50px',
+		height: '45px',
 		borderRadius: '50%',
 		color: '#ffffff',
 		backgroundColor: theme.palette.primary.main,
@@ -33,15 +33,27 @@ export default (theme) => ({
 		fontWeight: '300',
 		padding: '10px',
 	},
-	closeButtonDiv: {
-		// position: 'absolute', 
-		// top: '10px',
-		// right: '10px',
+	rightItem: {
+		display: 'flex',
+		flexDirection: 'column',
+		alignSelf: 'stretch',
 	},
-	closeButton: {
+	popover: {
+		flex: '1 0 50%',
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'flex-end',
+		paddingBottom: '5px',
+	},
+	imageButton: {
 		height: '24px', 
 		width: '24px', 
 		color: theme.palette.colors.grey[800],
 		cursor: 'pointer',
+		flex: '1 0 50%',
+		paddingTop: '10px',
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'flex-start',
 	},
 });

@@ -6,11 +6,13 @@ export default (theme) => ({
 		paddingLeft: '30px',
 	},
 	buttons: {
-		paddingRight: '30px',
+		paddingRight: '10px',
 	},
 	iconButton: {
 		height: '32px',
 		width: '32px',
+		paddingTop: '10px',
+		color: theme.palette.colors.grey[700],
 	},
 	headerContent: {
 		backgroundColor:'#ffffff',

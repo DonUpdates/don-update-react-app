@@ -8,6 +8,7 @@ import TabPanel from '../TabPanel';
 import PropTypes from 'prop-types';
 import style from './styles';
 import { withStyles } from '@material-ui/core';
+import CardGrid from '../CardGrid';
 
 const CustomTabs = ({ ...props }) => {
   const theme = useTheme();
@@ -20,13 +21,8 @@ const CustomTabs = ({ ...props }) => {
   const handleChangeIndex = (index) => {
     setValue(index);
   };
-  
-  const {
-    classes,
-    newsItem,
-    breakingItem,
-    infoItem
-  } = props;
+
+  const { classes } = props;
 
   return (
     <div>
@@ -44,18 +40,18 @@ const CustomTabs = ({ ...props }) => {
         </Tabs>
       </AppBar>
       <SwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={value}
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          {newsItem}
+          <CardGrid category={1} />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          {breakingItem}
+        <CardGrid category={2} />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          {infoItem}
+        <CardGrid category={3} />
         </TabPanel>
       </SwipeableViews>
     </div>
@@ -67,6 +63,7 @@ CustomTabs.propTypes = {
 	newsItem: PropTypes.object,
   breakingItem: PropTypes.object,
   infoItem: PropTypes.object,
+  loadMore: PropTypes.func,
 };
 
 export default withStyles(style)(CustomTabs);
