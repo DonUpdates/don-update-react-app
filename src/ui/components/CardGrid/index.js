@@ -12,7 +12,6 @@ const CardGrid = ({ ...props }) => {
   const [pageNo, setPageNo] = React.useState(1);
 
   const transformDateTime = (date) => {
-    console.log(date);
     const dateValues = date.split(' ');
     if (dateValues[0] === new Date().toJSON().slice(0, 10)) {
       return convertFrom24To12Format(dateValues[1]);
